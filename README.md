@@ -40,12 +40,16 @@ Start the server with:
    ```
 This will launch the server on http://localhost:8080/, ready to accept requests.
 
-## API Endpoints
-- POST /auth/register - Register a new user.
-- POST /auth/login - Login an existing user.
-- GET /users - Retrieve all users (authenticated users only).
-- DELETE /users/:id - Delete a user (authenticated and owner only).
-- PATCH /users/:id - Update user details (authenticated and owner only).
+# API Endpoints
+
+| HTTP Method | Endpoint           | Description                            | Authentication           |
+|-------------|--------------------|----------------------------------------|--------------------------|
+| POST        | /auth/register     | Register a new user.                   | Not required             |
+| POST        | /auth/login        | Login an existing user.                | Not required             |
+| GET         | /users             | Retrieve all users.                    | Required                 |
+| DELETE      | /users/:id         | Delete a user.                         | Required (owner only)    |
+| PATCH       | /users/:id         | Update user details.                   | Required (owner only)    |
+
 
 
 
