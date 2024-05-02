@@ -9,6 +9,8 @@ import mongoose from 'mongoose';
 import router from './router';
 
 const app = express()
+require('dotenv').config();
+
 
 app.use(cors({
     credentials: true,
@@ -21,13 +23,13 @@ app.use(bodyParser.json());
 const server = http.createServer(app)
 
 
+
+
 server.listen(8080, () => {
     console.log("server running on http://localhost:8080/")
 })
 
-
-const MONGO_URL = 'mongodb+srv://sakiphan:ESZ1907fb.@rest-api.wf96ykz.mongodb.net/?retryWrites=true&w=majority&appName=REST-API'
-// const MONGO_URL = 'mongodb+srv://sakiphan:ESZ1907fb.@rest-api.wf96ykz.mongodb.net/'
+const MONGO_URL = process.env.MONGO_URL;
 mongoose.Promise = Promise;
 mongoose.connect(MONGO_URL);
 mongoose.connection.on('error',(error:Error)=>console.log(error));
