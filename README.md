@@ -20,8 +20,8 @@ This repository contains the source code for a REST API server implemented using
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/sakiphan/RESTAPI-NodejS.git
-   cd RESTAPI-NodejS
+   git clone https://github.com/sakiphan/RESTAPI-NodeJS.git
+   cd RESTAPI-NodeJS
 ## Install dependencies
  ```bash
    npm install
